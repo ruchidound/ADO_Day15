@@ -49,64 +49,72 @@ namespace ADO_Day15
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(208, 200);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 15;
             this.label4.Text = "Location";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(208, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 20);
+            this.label3.Size = new System.Drawing.Size(151, 22);
             this.label3.TabIndex = 14;
             this.label3.Text = "Department Head";
             // 
             // txtLocation
             // 
+            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocation.Location = new System.Drawing.Point(370, 200);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(165, 26);
+            this.txtLocation.Size = new System.Drawing.Size(165, 28);
             this.txtLocation.TabIndex = 13;
             // 
             // txtHead
             // 
+            this.txtHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHead.Location = new System.Drawing.Point(374, 144);
             this.txtHead.Name = "txtHead";
-            this.txtHead.Size = new System.Drawing.Size(165, 26);
+            this.txtHead.Size = new System.Drawing.Size(165, 28);
             this.txtHead.TabIndex = 12;
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(374, 85);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(165, 26);
+            this.txtName.Size = new System.Drawing.Size(165, 28);
             this.txtName.TabIndex = 11;
             // 
             // txtCode
             // 
+            this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(374, 34);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(165, 26);
+            this.txtCode.Size = new System.Drawing.Size(165, 28);
             this.txtCode.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(208, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
+            this.label2.Size = new System.Drawing.Size(155, 22);
             this.label2.TabIndex = 9;
             this.label2.Text = "Department Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(208, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "Department Code";
             // 
@@ -174,8 +182,9 @@ namespace ADO_Day15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(950, 663);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(926, 663);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.GridDepartment);

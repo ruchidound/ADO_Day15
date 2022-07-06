@@ -16,7 +16,7 @@ namespace ADO_Day15
         private SqlConnection con = null;
         private SqlDataAdapter adapter = null;
         private DataSet ds = null;
-         static int sindex=0;
+        
         public DML()
         {
             InitializeComponent();
@@ -70,19 +70,29 @@ namespace ADO_Day15
         {
             using (con = new SqlConnection(ConfigurationManager.ConnectionStrings["HRConnection"].ConnectionString))
             {
-                using (adapter = new SqlDataAdapter("select * from Department", con))
+                using (adapter = new SqlDataAdapter("select * from Department where cDepartmentCode like '" + txtCode.Text + "%'", con))
                 {
-                    SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    GridDepartment.DataSource = dt;
+
                     ds = new DataSet();
                     adapter.Fill(ds, "Depart");
-                    DataColumn[] dc = new DataColumn[1];
-                    dc[0] = ds.Tables["Depart"].Columns["cDepartmentCode"];
-                    ds.Tables["Depart"].PrimaryKey = dc;
-                    DataRow dr = ds.Tables["Depart"].Rows.Find(txtCode.Text);
                     txtName.Text = ds.Tables["Depart"].Rows[0]["vDepartmentName"].ToString();
                     txtHead.Text = ds.Tables["Depart"].Rows[0]["vDepartmentHead"].ToString();
                     txtLocation.Text = ds.Tables["Depart"].Rows[0]["vLocation"].ToString();
-                    GridDepartment.DataSource = ds.Tables["Depart"];
+                    adapter.Update(ds, "Depart");
+                    //SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                    //ds = new DataSet();
+                    //adapter.Fill(ds, "Depart");
+                    //DataColumn[] dc = new DataColumn[1];
+                    //dc[0] = ds.Tables["Depart"].Columns["cDepartmentCode"];
+                    //ds.Tables["Depart"].PrimaryKey = dc;
+                    //DataRow dr = ds.Tables["Depart"].Rows.Find(txtCode.Text);
+                    //txtName.Text = ds.Tables["Depart"].Rows[0]["vDepartmentName"].ToString();
+                    //txtHead.Text = ds.Tables["Depart"].Rows[0]["vDepartmentHead"].ToString();
+                    //txtLocation.Text = ds.Tables["Depart"].Rows[0]["vLocation"].ToString();
+                    //GridDepartment.DataSource = ds.Tables["Depart"];
                 }
             }
         }
